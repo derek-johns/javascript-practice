@@ -8,7 +8,7 @@ from objects, into distinct variables.
 - Can also handle nested structures by using nested destructuring syntax
 
 */
-
+/*
 //
 // Example WITHOUT destructuring.
 const student = {
@@ -107,3 +107,30 @@ const student = {
 const { name, scores: { math, science = 50 } } = student;
 
 console.log(`${name} scored ${math} in math and ${science} in science.`)
+
+
+//
+// Array Destructuring
+// - Each variable is mapped to corresponding index within array
+const rgb = [255, 200, 0];
+const [red, green, blue] = rgb;
+console.log(`R: ${red}, G: ${green}, B: ${blue}`);
+
+// Default values.
+const rgb = [200];
+const [red = 255, green, blue = 255] = rgb;
+console.log(`R: ${red}, G: ${green}, B: ${blue}`);
+
+// - Assignment expression does not require parethneses.
+// - Unlike object destructuring.
+let red = 100;
+let green = 200;
+let blue = 50;
+const rgb = [200, 255, 100];
+[red, green] = rgb;
+console.log(`R: ${red}, G: ${green}, B: ${blue}`);
+*/
+// Skipping items.
+const rgb = [200, 255, 100];
+const [,, blue] = rgb;
+console.log(`Blue: ${blue}`);
