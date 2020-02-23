@@ -141,7 +141,7 @@ console.log(`Blue: ${blue}`);
 const color = ['#FF00FF', [255, 0, 255], 'rgb(255, 0, 255)'];
 const [hex, [red, green, blue]] = color;
 console.log(hex, red, green, blue);
-*/
+
 //
 // Rest Items
 // - Rest parameter allows us to assign some items to variables while 
@@ -152,5 +152,20 @@ console.log(hex, red, green, blue);
 const rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 const [red,, yellow, ...otherColors] = rainbow;
 console.log(otherColors);
+*/
+//
+// Mixed Destructuring
+const person = {
+    name: 'John Doe',
+    age: 25,
+    location: {
+        country: 'Canada',
+        city: 'Vancouver',
+        coordinates: [49.2827, -123.1207]
+    }
+}
+
+const { name, location: {country, city, coordinates: [lat, lng]}} = person;
+console.log(`I am ${name} from ${city}, ${country}. Latitude(${lat}), Longitude(${lng})`)
 
 
