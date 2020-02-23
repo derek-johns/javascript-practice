@@ -129,8 +129,28 @@ let blue = 50;
 const rgb = [200, 255, 100];
 [red, green] = rgb;
 console.log(`R: ${red}, G: ${green}, B: ${blue}`);
-*/
+
 // Skipping items.
 const rgb = [200, 255, 100];
 const [,, blue] = rgb;
 console.log(`Blue: ${blue}`);
+
+//
+// Nested Array Destructuring
+// - Must be an array in order.
+const color = ['#FF00FF', [255, 0, 255], 'rgb(255, 0, 255)'];
+const [hex, [red, green, blue]] = color;
+console.log(hex, red, green, blue);
+*/
+//
+// Rest Items
+// - Rest parameter allows us to assign some items to variables while 
+// ensuring the remaining items are captured (assigned to another
+// local variable).
+// SYNTAX: (...param)
+// - Must be last item
+const rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+const [red,, yellow, ...otherColors] = rainbow;
+console.log(otherColors);
+
+
