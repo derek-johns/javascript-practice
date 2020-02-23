@@ -9,3 +9,5 @@ JavaScript Practice Scripts
         - destructuring-photo-manipulation-example.js
         - destructuring-cloning-arrays-example.js
         - destructuring-function-parameters-example.js
+    - map()
+        - map-function-practice.js
