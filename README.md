@@ -11,3 +11,5 @@ JavaScript Practice Scripts
         - destructuring-function-parameters-example.js
     - map()
         - map-function-practice.js
+    - Ternary Operator
+        - ternary-practice.js
